@@ -16,15 +16,15 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Projeto Integrador "
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="Seja Bem vindo ao Projeto PontoProfessor"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.Description="Seja Bem vindo ao Projeto PontoProfessor"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
