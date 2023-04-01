@@ -1,24 +1,53 @@
-﻿namespace PontoProf;
+﻿using Microsoft.Maui.Controls;
+using System;
 
-public partial class MainPage : ContentPage
+namespace PontoProf
 {
-	int count = 0;
+    
+    public partial class LoginPage : ContentPage
+    {
+        public LoginPage()
+        {
+            InitializeComponent();
+        }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+        private void LogarButton_Clicked(object sender, EventArgs e)
+        {
+            // Lógica para fazer login
+            string drt = DrtEntry.Text;
+            string senha = SenhaEntry.Text;
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+            // Exibir mensagem de sucesso ou erro
+            if (drt == "usuario" && senha == "senha")
+            {
+                DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
+                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                DisplayAlert("Erro", "DRT ou senha inválidos!", "OK");
+            }
+        }
+    }
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+        private void SalvarButton_Clicked(object sender, EventArgs e)
+        {
+            // Lógica para salvar informações do professor
+            string nome = NomeEntry.Text;
+            TimeSpan horario = HorarioEntry.Time;
+            string sala = SalaEntry.Text;
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+            // Exibir mensagem de sucesso
+            DisplayAlert("Sucesso", "Professor cadastrado com sucesso!", "OK");
+        }
+
+
+    }
 }
 

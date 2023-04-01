@@ -3,39 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PontoProf.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <StackLayout Padding="10">
+        <Label Text="Cadastro de Professor" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20" />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Label Text="Nome" />
+        <Entry x:Name="NomeEntry" />
 
-            <Label
-                Text="Projeto Integrador "
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <Label Text="Horário"/>
+        <TimePicker x:Name="HorarioEntry"/>
 
-            <Label
-                Text="Seja Bem vindo ao Projeto PontoProfessor"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Seja Bem vindo ao Projeto PontoProfessor"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <Label Text="Sala/Aula" />
+        <Entry x:Name="SalaEntry" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+        <Button Text="Salvar" Clicked="SalvarButton_Clicked" Margin="0,20,0,0" />
+    </StackLayout>
 
 </ContentPage>
