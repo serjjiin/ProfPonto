@@ -18,7 +18,7 @@ namespace PontoProf
             string senha = SenhaEntry.Text;
 
             // Exibir mensagem de sucesso ou erro
-            if (drt == "usuario" && senha == "senha")
+            if (drt != null || senha != null)
             {
                 DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
                 Navigation.PushAsync(new MainPage());
@@ -39,7 +39,7 @@ namespace PontoProf
         private void SalvarButton_Clicked(object sender, EventArgs e)
         {
             // Lógica para salvar informações do professor
-            string nome = NomeEntry.Text;
+            string nome = ObsEntry.Text;
             TimeSpan horario = HorarioEntry.Time;
             string sala = SalaEntry.Text;
 

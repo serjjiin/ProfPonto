@@ -4,10 +4,10 @@
              x:Class="PontoProf.MainPage">
 
     <StackLayout Padding="10">
-        <Label Text="Cadastro de Professor" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20" />
+        <Label Text="Registro de Ponto" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20" />
 
-        <Label Text="Nome" />
-        <Entry x:Name="NomeEntry" />
+        <Label Text="OBS?" />
+        <Entry x:Name="ObsEntry" />
 
         <Label Text="Horário"/>
         <TimePicker x:Name="HorarioEntry"/>
